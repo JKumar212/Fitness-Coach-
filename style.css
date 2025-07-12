@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #ff6b6b;
+}
+
+.selector, #exerciseListSection, #tutorialSection {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+select {
+  padding: 10px;
+  width: 80%;
+  margin-top: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.tutorial {
+  margin-top: 20px;
+}
+
+.tutorial img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.tutorial p {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.timer {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.timer label,
+.timer select {
+  margin-top: 10px;
+  display: block;
+  font-size: 1em;
+}
+
+.timer button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer button:hover {
+  background-color: #218838;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  position: relative;
+}
+
+.about-btn {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+}
+
+.about-btn:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #ff6b6b;
+}
+
+.modal-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}

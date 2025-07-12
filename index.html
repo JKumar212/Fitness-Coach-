@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitTrack - Your Fitness Partner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🏋️ FitTrack</h1>
+    <p>Your Modern Fitness Guide</p>
+  </header>
+
+  <main>
+    <section class="selector">
+      <h2>Select a Body Part</h2>
+      <select id="bodyPartSelect" onchange="loadExercises()">
+        <option value="">--Choose Body Part--</option>
+        <option value="chest">Chest</option>
+        <option value="arms">Arms</option>
+        <option value="legs">Legs</option>
+        <option value="back">Back</option>
+        <option value="abs">Abs</option>
+      </select>
+    </section>
+
+    <section id="exerciseListSection" class="hidden">
+      <h2>Select an Exercise</h2>
+      <select id="exerciseSelect" onchange="loadTutorial()"></select>
+    </section>
+
+    <section id="tutorialSection" class="hidden">
+      <h2>Exercise Tutorial</h2>
+      <div class="tutorial">
+        <img id="exerciseGif" src="" alt="Exercise Demo" />
+        <p id="exerciseDesc"></p>
+      </div>
+      <div class="timer">
+        <label for="repsSelect"><strong>Select Repetitions:</strong></label>
+        <select id="repsSelect">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+        <p><strong>Remaining Reps:</strong> <span id="reps">10</span></p>
+        <p><strong>Time:</strong> <span id="time">00:30</span></p>
+        <button onclick="startTimer()">Start</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FitTrack. All Rights Reserved.</p>
+    <button class="about-btn" onclick="toggleAbout()">About Developer</button>
+  </footer>
+
+  <!-- Developer Modal -->
+  <div id="aboutModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="toggleAbout()">&times;</span>
+      <h2>👨‍💻 Developer Info</h2>
+      <p>Developed by <strong>Jayanta Kumar Kakati</strong></p>
+      <p>Passionate web developer focused on youth-centric digital tools.</p>
+      <p>🌐 Visit: <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleAbout() {
+      const modal = document.getElementById("aboutModal");
+      modal.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
